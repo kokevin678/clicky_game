@@ -1,83 +1,68 @@
-# Clicky Game
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Memory clicky game. In this game you will be memorizing the morph of ball phython and win by only click each different morph once. Each ball python is a card generated from the snakes.json file. The card are wrapped in a wrapper which shuffles each time you click a card.
+## Available Scripts
 
-## Built With
+In the project directory, you can run:
 
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com/)
+### `npm start`
 
-## Installation Guide
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-First navigate to your terminal and clone the repository(https://github.com/kokevin678/clicky_game.git). Then install the dependencies in terminal using by typing in "npm install". Run npm start in terminal using to run React.
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-## Demo
+### `npm test`
 
-[Demo](/clicky_game/public/assets/img/clickyGame.gif)
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Code Snippets
+### `npm run build`
 
-Track the card clicked, update score, and shuffle the cards.
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```js
-this.setState({
-  snakes,
-  clickedCard,
-  score: clickedCard.length,
-  status: ""
-});
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-for (let i = snakes.length - 1; i > 0; i--) {
-  let j = Math.floor(Math.random() * (i + 1));
-  [snakes[i], snakes[j]] = [snakes[j], snakes[i]];
-}
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Wrong guess, that card has always been clicked.
+### `npm run eject`
 
-```js
-    if (clickedCard.includes(id)) {
-      this.setState({
-        clickedCard: [],
-        score: clickedCard.length,
-        status:
-          "Game Over! You already guess that ball python. Click to play again!"
-      });
-      return;
-    } else {
-      clickedCard.push(id);
-```
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Clicked all 12 cards without any repeat, Game win.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-```js
-if (clickedCard.length === 12) {
-  this.setState({
-    score: 12,
-    status: "You Won! You guessed all the ball python! Click to play again!",
-    clickedCard: []
-  });
-  console.log("Win");
-  return;
-}
-```
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-## Deployed Link
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-- [See Live Site](https://kokevin678.github.io/clicky_game/)
+## Learn More
 
-## Authors
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-- **Chengyu Kevin Ko**
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-* [Link to Portfolio Site](#)
-* [Link to Github](https://github.com/kokevin678)
-* [Link to LinkedIn](https://www.linkedin.com/)
+### Code Splitting
 
-## License
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-This project is licensed under the MIT License
+### Analyzing the Bundle Size
 
-## Acknowledgments
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-- Images taken from [World of Ball Python](http://www.worldofballpythons.com/morphs/)
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
