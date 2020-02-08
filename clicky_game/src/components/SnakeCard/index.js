@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function FriendCard(props) {
+function SnakeCard(props) {
   return (
     <span onClick={() => props.shuffleCard(props.id)} className="remove">
       <div className="card">
@@ -13,4 +13,4 @@ function FriendCard(props) {
   );
 }
 
-export default FriendCard;
+export default SnakeCard;
