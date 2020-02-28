@@ -13,7 +13,7 @@ First navigate to your terminal and clone the repository(https://github.com/koke
 
 ## Demo
 
-[Demo](/clicky_game/public/assets/img/clickyGame.gif)
+[Demo](/public/assets/img/clickyGame.gif)
 
 ## Code Snippets
 
